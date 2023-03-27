@@ -36,6 +36,8 @@ public class T {
         this.secondi = secondi;
     }
 
+
+
     @Override
     public String toString() {
         return "T{" +
@@ -44,4 +46,11 @@ public class T {
                 ", secondi=" + secondi +
                 '}';
     }
+
+    public void setOrario(int ore, int  minuti, int secondi){
+        this.ore = ore;
+        this.minuti = minuti;
+        this.secondi = secondi;
+    }
+
 }
