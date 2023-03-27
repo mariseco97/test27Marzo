@@ -21,12 +21,16 @@ public class Corso {
         return tmp.getVoto();
     }
 
-    public void studentiPeggiori(){
+    public ArrayList<String> studentiPeggiori(){
+        ArrayList<String> listaCognomiPeggiori = null;
         for (Esame esame: listaEsami
-             ) {
-
+        ) {
+            if(esame.getVoto() == votoMinimo(listaEsami)){
+                listaCognomiPeggiori.add(esame.getCognome());
+            }
 
         }
+        return listaCognomiPeggiori;
     }
 
 
