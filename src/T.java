@@ -53,4 +53,24 @@ public class T {
         this.secondi = secondi;
     }
 
+    public void addOra(int ore, int minuti, int secondi){
+
+        this.secondi += s;
+        if (secondi >= 60) {
+            secondi -= 60;
+            minuti += 1;
+        }
+        minuti += m;
+        if (minuti >= 60) {
+            minuti -= 60;
+            ore += 1;
+        }
+        ore += h;
+        if (ore >= 24) {
+            ore -= 24;
+        }
+
+
+    }
+
 }
