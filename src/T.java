@@ -45,5 +45,26 @@ public class T {
                 '}';
     }
 
+    public void setOrario(int ore, int minuti, int secondi){
+        this.ore = ore;
+        this.minuti = minuti;
+        this.secondi = secondi;
+    }
+    public void addOra(int ore, int minuti, int secondi) {
+        this.secondi += secondi;
+        this.minuti += minuti;
+        this.ore += ore;
+        if (this.secondi >= 60) {
+            this.secondi -= 60;
+            this.minuti += 1;
+        }
+        if (this.minuti >= 60) {
+            this.minuti -= 60;
+            this.ore += 1;
+        }
+        if (this.ore >=24){
+            this.ore -= 24;
+        }
 
+    }
 }
