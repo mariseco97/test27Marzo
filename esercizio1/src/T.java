@@ -47,7 +47,7 @@ public class T {
                 '}';
     }
 
-    // TODO : aggiungi a setOrario i try catch perché deve essere un orario sensato 
+    // TODO : aggiungi a setOrario i try catch perché deve essere un orario sensato
     public void setOrario(int ore, int  minuti, int secondi){
 
         this.ore = ore;
