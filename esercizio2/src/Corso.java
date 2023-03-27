@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public class Corso {
 
     private ArrayList<Esame> listaEsami;
-    public void Corso(ArrayList<Esame> listaEsami) {
+    public Corso(ArrayList<Esame> listaEsami) {
         this.listaEsami = listaEsami;
     }
 
-    public int votoMinimo(ArrayList<Esame> listaEsami){
+    public int votoMinimo(){
         int i;
         Esame tmp = listaEsami.get(0);
 
@@ -20,12 +20,14 @@ public class Corso {
         }
         return tmp.getVoto();
     }
-
     public void studentiPeggiori(){
-        for (Esame esame: listaEsami
-             ) {
-
+        ArrayList<String> listaCognomiPeggiori = null;
+        for (Esame esame: listaEsami) {
+            if(esame.getVoto() == votoMinimo()){
+                System.out.println(esame.getCognome());
+            }
         }
+
     }
 
 }
