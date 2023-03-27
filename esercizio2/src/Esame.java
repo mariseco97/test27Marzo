@@ -45,5 +45,5 @@ public class Esame {
                 ", voto=" + voto +
                 '}';
     }
-    
+
 }
