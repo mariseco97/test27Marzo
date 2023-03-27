@@ -47,7 +47,7 @@ public class T {
                 '}';
     }
 
-
+    // TODO : aggiungi a setOrario i try catch perché deve essere un orario sensato 
     public void setOrario(int ore, int  minuti, int secondi){
 
         this.ore = ore;
@@ -73,6 +73,33 @@ public class T {
         }
 
 
+
+
     }
+
+
+    public void subOra(int ore, int minuti, int secondi) {
+        // convertiamo l'ora corrente in secondi
+        int oraSecondi = this.ore * 3600 + this.minuti * 60 + this.secondi;
+
+        // convertiamo l'ora da sottrarre in secondi
+        int sottrazioneSecondi = ore * 3600 + minuti * 60 + secondi;
+
+        // sottraiamo i secondi dell'ora da sottrarre dall'ora corrente
+        oraSecondi -= sottrazioneSecondi;
+
+        // se il tempo risultante è negativo, aggiungiamo 24 ore per ottenere l'ora corretta
+        if (oraSecondi < 0) {
+            oraSecondi += 24 * 3600;
+        }
+
+        // convertiamo i secondi risultanti in ore, minuti e secondi
+        this.ore = oraSecondi / 3600;
+        oraSecondi %= 3600;
+        this.minuti = oraSecondi / 60;
+        this.secondi = oraSecondi % 60;
+    }
+
+
 
 }
